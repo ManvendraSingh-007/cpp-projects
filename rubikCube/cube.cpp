@@ -1,10 +1,11 @@
 #include <iostream>
 #include <algorithm>
+#include <iomanip>
 #include "cube.h"
 
 
 
-Cube::Cube() : cube_arr_{
+constexpr Cube::Cube() : cube_arr_{
     {
         { {{1,1,1},{1,1,1},{1,1,1}} },
 
@@ -29,6 +30,27 @@ Cube::Cube(const int (&c_style_data_)[6][3][3]) {
 }
 
 void Cube::displayCube() {
-    std::cout << "#==============================#" << std::endl;
+    std::cout << "#========================================================#\n";
+    std::cout
+    << "    " << "Face1"
+    << "    " << "Face2"
+    << "    " << "Face3"
+    << "    " << "Face4"
+    << "    " << "Face5"
+    << "    " << "Face6"
+    << '\n';
 
+    
+    for (int i = 0; i < 3; i++) {
+        std::cout << "    ";
+        for (int f = 0; f < 6; f++) {
+            for (int j = 0; j < 3; j++) {
+                std::cout << cube_arr_[f][i][j] << ' ';
+            }
+            std::cout << "   ";
+        }
+        std::cout << '\n';
+    }
+
+    std::cout << "#========================================================#\n";
 }
