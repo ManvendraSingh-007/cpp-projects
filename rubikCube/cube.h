@@ -24,4 +24,4 @@ public:
    
 };
 
-#endif RUBIK
+#endif
