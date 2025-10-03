@@ -1,5 +1,8 @@
 #include <iostream>
 #include <set>
+#include <vector>
+#include <algorithm>
+#include <random>
 #include <limits>
 #include "cube.h"
 
@@ -154,3 +157,52 @@ void Cube::inputCubeState()
 
     validate_input();
 }
+
+void Cube::scramble()
+{
+    std::vector<int> colors;
+    std::array<int, 6> unique_centre {1,2,3,4,5,6};
+    std::random_device rd;
+    std::minstd_rand0 engine(rd());
+
+    int main_pool_index{}, centre_pool_index{};
+
+    for(int j{}; j < 6; j++) 
+    {
+        for(int i{}; i < 8; i++) 
+        {
+            colors.push_back(j+1);
+        }
+    }
+
+
+    std::shuffle(colors.begin(), colors.end(), engine);
+    std::shuffle(unique_centre.begin(), unique_centre.end(), engine);
+
+    for (int face{}; face < 6; face++)
+    {
+        for(int row{}; row < 3; row++) {
+            for (int col{}; col < 3; col++) {
+
+                if(row == 1 && col == 1) {
+                    cube_arr_[face][row][col] = unique_centre[centre_pool_index];
+                    centre_pool_index++;
+                }
+
+                else {
+                    cube_arr_[face][row][col] = colors[main_pool_index];
+                    main_pool_index++;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+void Cube::face1() {}
+void Cube::face2() {}
+void Cube::face3() {}
+void Cube::face4() {}
+void Cube::face5() {}
+void Cube::face6() {}
