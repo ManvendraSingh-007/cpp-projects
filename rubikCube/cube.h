@@ -22,6 +22,15 @@ public:
         return {};
     }
 
+    void scramble();
+
+    void face1();
+    void face2();
+    void face3();
+    void face4();
+    void face5();
+    void face6();
+
     void displayCube();
     void inputCubeState();
 
