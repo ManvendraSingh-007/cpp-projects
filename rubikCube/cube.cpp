@@ -63,7 +63,6 @@ void Cube::validate_input()
     constexpr int targe_count{9};
     std::array<int, 7> global_counts{0, 0, 0, 0, 0, 0, 0};
     std::set<int> unique_centre_value;
-    std::string faceNames[6] = {"FRONT", "RIGHT", "BACK", "LEFT", "TOP", "BOTTOM"};
 
     for (int f = 0; f < 6; f++)
     {
@@ -200,9 +199,93 @@ void Cube::scramble()
     
 }
 
-void Cube::face1() {}
-void Cube::face2() {}
-void Cube::face3() {}
-void Cube::face4() {}
-void Cube::face5() {}
-void Cube::face6() {}
+void Cube::face1() {
+    std::cout << "#========================================================#\n";
+    std::cout << "    Face1\n";
+    for(int face{}; face < 1; face++) {
+        for(int row{}; row < 3; row++) {
+            std::cout << "    ";
+            for(int col{}; col < 3; col++) {
+                std::cout << cube_arr_[0][row][col] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+    std::cout << "#========================================================#\n";
+}
+void Cube::face2() {
+    std::cout << "#========================================================#\n";
+    std::cout << "    Face2\n";
+    for(int face{}; face < 1; face++) {
+        for(int row{}; row < 3; row++) {
+            std::cout << "    ";
+            for(int col{}; col < 3; col++) {
+                std::cout << cube_arr_[1][row][col] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+    std::cout << "#========================================================#\n";
+}
+void Cube::face3() {
+    std::cout << "#========================================================#\n";
+    std::cout << "    Face3\n";
+    for(int face{}; face < 1; face++) {
+        for(int row{}; row < 3; row++) {
+        std::cout << "    ";
+            for(int col{}; col < 3; col++) {
+                std::cout << cube_arr_[2][row][col] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+    std::cout << "#========================================================#\n";
+}
+void Cube::face4() {
+    std::cout << "#========================================================#\n";
+    std::cout << "    Face4\n";
+    for(int face{}; face < 1; face++) {
+        for(int row{}; row < 3; row++) {
+        std::cout << "    ";
+            for(int col{}; col < 3; col++) {
+                std::cout << cube_arr_[3][row][col] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+    std::cout << "#========================================================#\n";
+}
+void Cube::face5() {
+    std::cout << "#========================================================#\n";
+    std::cout << "    Face5\n";
+    for(int face{}; face < 1; face++) {
+        for(int row{}; row < 3; row++) {
+        std::cout << "    ";
+            for(int col{}; col < 3; col++) {
+                std::cout << cube_arr_[4][row][col] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+    std::cout << "#========================================================#\n";
+}
+void Cube::face6() {
+    std::cout << "#========================================================#\n";
+    std::cout << "    Face6\n";
+    for(int face{}; face < 1; face++) {
+        for(int row{}; row < 3; row++) {
+        std::cout << "    ";
+            for(int col{}; col < 3; col++) {
+                std::cout << cube_arr_[5][row][col] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+    std::cout << "#========================================================#\n";
+}
