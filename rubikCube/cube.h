@@ -37,6 +37,7 @@ public:
     static constexpr int face{6};
     static constexpr int row{3};
     static constexpr int column{3};
+    static inline std::string faceNames[6] = {"FRONT", "RIGHT", "BACK", "LEFT", "TOP", "BOTTOM"};
 };
 
 #endif
